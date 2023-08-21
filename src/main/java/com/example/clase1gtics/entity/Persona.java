@@ -1,22 +1,25 @@
 package com.example.clase1gtics.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Random;
+import java.util.UUID;
+
+@Getter
+@Setter
 public class Persona {
+    private int id = new Random().nextInt();
     private String nombre;
     private String apellido;
+    private String email = "a@a.com";
+    private int edad;
 
-    public String getNombre() {
-        return nombre;
+    public Persona() {
     }
 
-    public void setNombre(String nombre) {
+    public Persona(String nombre, String apellido) {
         this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 }
